@@ -75,14 +75,13 @@ func main() {
 	}
 
 	// CAUTION/WARNING --> this chunk writes to a Google FireStore Cloud DB.
-	// Resources are limited. Things could get out of hand.
 	// _, _, err = client.Collection("stories").Add(ctx, map[string]interface{}{
 	// 	"img":   "https://pictures-of-cats.org/wp-content/uploads/2012/09/stopping-a-cat-biting-you-1.jpg",
 	// 	"tags":  [2]string{"favorite", "happy"},
 	// 	"title": "Cat Bit",
 	// })
 
-	// this is a safeguard/switch that keeps an additional story from
+	// this is a safeguard/switch preventing an additional story from
 	// being generated when running main.go
 	storyNeedsAdded := false
 
